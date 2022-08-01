@@ -3,11 +3,13 @@ import java.util.Scanner;
 public class ArrayTask4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String userAction;
+        String userAction = "";
+        String enterWords;
+        String[] words;
         do {
             System.out.println("Enter 3 words separated by commas");
-            String enterWords = sc.nextLine();
-            String[] words = enterWords.split(",");
+            enterWords = sc.nextLine();
+            words = enterWords.split(",");
             System.out.println("Choose an action with an array of words and enter a number: ");
             System.out.println("1 - maximum length;");
             System.out.println("2 - start with;");
@@ -17,7 +19,10 @@ public class ArrayTask4 {
             userAction = sc.nextLine();
             switch (userAction) {
                 case "1":
-                    System.out.println("You add 1");
+                    for (String i: words){
+                        System.out.println(i.length());
+                    }
+
 //                int index = 0;
 //                int wordLength = words[0].length();
 //                for (int i = 1; i < enterWords.length(); i++) {
@@ -29,18 +34,23 @@ public class ArrayTask4 {
 //                }
                     break;
                 case "2":
-                    System.out.println("You add 2");
-
+                    for (String i: words){
+                        System.out.println(i.startsWith("a"));
+                    }
                     break;
                 case "3":
-                    System.out.println("You add 3");
+                    for (String i: words){
+                        System.out.println(i.endsWith("g"));
+                    }
                     break;
                 case "4":
-                    System.out.println("You add 4");
+                    for (String i: words){
+                        System.out.println(i.contains("b"));
+                    }
                     break;
 
             }
-        } while (userAction.equals(0));
+        } while (userAction != "0");
     }
 
 //    public static String findLongestWords() {
