@@ -3,14 +3,19 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        double firstValue;
+        double secondValue;
+        String operation;
+        double result;
+
         System.out.println("Enter the first number");
 
         if (sc.hasNextDouble()) {
-            double firstValue = sc.nextDouble();
+            firstValue = sc.nextDouble();
             System.out.println("Input is correct: " + firstValue);
 
             System.out.println("Enter an operation (for example: +, -, *, /, %)");
-            String operation = sc.next();
+            operation = sc.next();
             System.out.println(operation);
             if (operation.equals("+") |
                     operation.equals("-") |
@@ -21,31 +26,27 @@ public class Calculator {
 
                 System.out.println("Enter the second number");
                 if (sc.hasNextDouble()) {
-                    double secondValue = sc.nextDouble();
+                    secondValue = sc.nextDouble();
                     System.out.println("Input is correct: " + secondValue);
                     if (operation.equals("+")) {
-                        double result = firstValue + secondValue;
+                        result = firstValue + secondValue;
                         System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                     } else if (operation.equals("-")) {
-                        double result = firstValue - secondValue;
+                        result = firstValue - secondValue;
                         System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                     } else if (operation.equals("*")) {
-                        double result = firstValue * secondValue;
+                        result = firstValue * secondValue;
                         System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                     } else if (operation.equals("/")) {
-                        if (firstValue == 0 | secondValue == 0) {
+                        if (secondValue == 0) {
                             System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
                         } else {
-                            double result = firstValue / secondValue;
+                            result = firstValue / secondValue;
                             System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                         }
                     } else if (operation.equals("%")) {
-                        if (firstValue == 0 | secondValue == 0) {
-                            System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
-                        } else {
-                            double result = firstValue % secondValue;
-                            System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
-                        }
+                        result = firstValue % secondValue;
+                        System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                     }
                 } else {
                     System.out.println("Input is wrong (should be a number)");
