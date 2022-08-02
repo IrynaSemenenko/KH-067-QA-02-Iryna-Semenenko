@@ -40,7 +40,7 @@ public class Calculator {
                             result = firstValue / secondValue;
                             System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                         }
-                    } else if (operation.equals("%")) {
+                    } else {
                         result = firstValue % secondValue;
                         System.out.println("Result: " + firstValue + operation + secondValue + "=" + result);
                     }
