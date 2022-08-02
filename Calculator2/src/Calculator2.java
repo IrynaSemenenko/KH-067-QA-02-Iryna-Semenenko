@@ -3,12 +3,16 @@ import java.util.Scanner;
 public class Calculator2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        double firstValue;
+        String operation;
+        double secondValue;
+        double result;
         System.out.println("Enter the first number");
         if (sc.hasNextDouble()) {
-            double firstValue = sc.nextDouble();
+            firstValue = sc.nextDouble();
             System.out.println("Input is correct");
             System.out.println("Enter an operation (for example: +, -, *, /, %)");
-            String operation = sc.next();
+            operation = sc.next();
             if (operation.equals("+") |
                     operation.equals("-") |
                     operation.equals("*") |
@@ -17,30 +21,30 @@ public class Calculator2 {
                 System.out.println("User inputs supported operations");
                 System.out.println("Enter the second number");
                 if (sc.hasNextDouble()) {
-                    double secondValue = sc.nextDouble();
+                    secondValue = sc.nextDouble();
                     System.out.println("Input is correct");
                     switch (operation) {
                         case "+" -> {
-                            double result = firstValue + secondValue;
+                            result = firstValue + secondValue;
                             System.out.println("Result is: " + result);
                         }
                         case "-" -> {
-                            double result = firstValue - secondValue;
+                            result = firstValue - secondValue;
                             System.out.println("Result is: " + result);
                         }
                         case "/" -> {
                             if (secondValue == 0) {
                                 System.out.println("Division by '0' is impossible. Try to select another operation or enter other data");
                             }
-                            double result = firstValue / secondValue;
+                            result = firstValue / secondValue;
                             System.out.println("Result is: " + result);
                         }
                         case "*" -> {
-                            double result = firstValue * secondValue;
+                            result = firstValue * secondValue;
                             System.out.println("Result is: " + result);
                         }
                         case "%" -> {
-                            double result = firstValue % secondValue;
+                            result = firstValue % secondValue;
                             System.out.println("Result is: " + result);
                         }
                     }
