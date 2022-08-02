@@ -3,85 +3,59 @@ import java.util.Scanner;
 public class ArrayTask4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String userAction = "";
+        String userAction;
         String enterWords;
         String[] words;
+        System.out.println("Enter several words separated by commas without gaps");
+        enterWords = sc.nextLine();
+        words = enterWords.split(",");
+        String longestWord = words[0];
         do {
-            System.out.println("Enter 3 words separated by commas");
-            enterWords = sc.nextLine();
-            words = enterWords.split(",");
             System.out.println("Choose an action with an array of words and enter a number: ");
-            System.out.println("1 - maximum length;");
-            System.out.println("2 - start with;");
-            System.out.println("3 - end with;");
-            System.out.println("4 - contains;");
+            System.out.println("1 - Find the longest word in an array");
+            System.out.println("2 - Find first letter of each word");
+            System.out.println("3 - Find last letter of each word");
+            System.out.println("4 - Find part word of each words");
             System.out.println("0 - exit");
             userAction = sc.nextLine();
             switch (userAction) {
-                case "1":
-                    for (String i: words){
-                        System.out.println(i.length());
+                case "1" -> {
+                    for (String i : words) {
+                        if (i.length() >= longestWord.length()) {
+                            longestWord = i;
+                        }
                     }
-
-//                int index = 0;
-//                int wordLength = words[0].length();
-//                for (int i = 1; i < enterWords.length(); i++) {
-//                    if (words[i].length() >= wordLength) {
-//                        index = i;
-//                        wordLength = words[i].length();
-//                        System.out.println(words[index]);
-//                    }
-//                }
-                    break;
-                case "2":
-                    for (String i: words){
-                        System.out.println(i.startsWith("a"));
+                    System.out.println("Your words: " + enterWords);
+                    System.out.println("The longest word in an array: " + longestWord);
+                }
+                case "2" -> {
+                    System.out.println("Your words: " + enterWords);
+                    System.out.println("The first letters of each word: ");
+                    for (String i : words) {
+                        System.out.println(i.charAt(0));
                     }
-                    break;
-                case "3":
-                    for (String i: words){
-                        System.out.println(i.endsWith("g"));
+                }
+                case "3" -> {
+                    System.out.println("Your words: " + enterWords);
+                    System.out.println("The last letters of each word");
+                    for (String i : words) {
+                        System.out.println(i.substring(i.length() - 1));
                     }
-                    break;
-                case "4":
-                    for (String i: words){
-                        System.out.println(i.contains("b"));
+                }
+                case "4" -> {
+                    System.out.println("Your words: " + enterWords);
+                    System.out.println("The part of each words: ");
+                    for (String i : words) {
+                        if (i.length() <= 3) {
+                            System.out.println(i);
+                        } else if (i.length() <= 10) {
+                            System.out.println(i.substring(1, i.length() - 2));
+                        } else {
+                            System.out.println(i.substring(5, i.length() - 2));
+                        }
                     }
-                    break;
-
+                }
             }
-        } while (userAction != "0");
+        } while (!userAction.equals("0"));
     }
-
-//    public static String findLongestWords() {
-////        Scanner sc = new Scanner(System.in);
-////        System.out.println("Enter 3 words separated by commas");
-////        String enterWords = sc.nextLine();
-//        String[] words = enterWords.split(",");
-//        int maxSize = words.length;
-//        String longestWord = words[0];
-//        for (int i = 1; i < maxSize; i++) {
-//            if (words[i].length() > longestWord.length()) {
-//                longestWord = words[i];
-//            }
-//        }
-//
-//        return longestWord;
-//    }
-
-//    public String findLongestWord(String[] words) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter 3 words separated by commas");
-//        String enterWords = sc.nextLine();
-//        words = enterWords.split(",");
-//        int maxSize = words.length;
-//        String longestWord = words[0];
-//        for (int i = 1; i < maxSize; i++) {
-//            if (words[i].length() > longestWord.length()) {
-//                longestWord = words[i];
-//            }
-//        }
-//
-//        return longestWord;
-//    }
 }
