@@ -7,13 +7,10 @@ public class Calculator {
         double secondValue;
         String operation;
         double result;
-
         System.out.println("Enter the first number");
-
         if (sc.hasNextDouble()) {
             firstValue = sc.nextDouble();
             System.out.println("Input is correct: " + firstValue);
-
             System.out.println("Enter an operation (for example: +, -, *, /, %)");
             operation = sc.next();
             System.out.println(operation);
@@ -23,7 +20,6 @@ public class Calculator {
                     operation.equals("/") |
                     operation.equals("%")) {
                 System.out.println("User inputs supported operations");
-
                 System.out.println("Enter the second number");
                 if (sc.hasNextDouble()) {
                     secondValue = sc.nextDouble();
