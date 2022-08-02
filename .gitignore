@@ -4,11 +4,10 @@
 # Log file
 *.log
 
-out/
-
 # idea
 .idea
 *.iml
+out/
 
 # BlueJ files
 *.ctxt
