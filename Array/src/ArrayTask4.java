@@ -6,56 +6,81 @@ public class ArrayTask4 {
         String userAction;
         String enterWords;
         String[] words;
-        System.out.println("Enter several words separated by commas without gaps");
-        enterWords = sc.nextLine();
-        words = enterWords.split(",");
-        String longestWord = words[0];
+        String enterValue;
+        int enterInt;
+        boolean end = false;
+        int findValue;
+        do {
+            System.out.println("Enter 3 or more words separated by commas without gaps");
+            enterWords = sc.nextLine();
+            words = enterWords.split(",");
+            if (!enterWords.contains(",") || words.length < 3) {
+                System.out.println("Something wrong! You should enter 3 or more words separated by commas without gaps ");
+            } else {
+                end = true;
+            }
+        } while (!end);
         do {
             System.out.println("Choose an action with an array of words and enter a number: ");
-            System.out.println("1 - Find the longest word in an array");
-            System.out.println("2 - Find first letter of each word");
-            System.out.println("3 - Find last letter of each word");
-            System.out.println("4 - Find part word of each words");
+            System.out.println("1 - maximum length ");
+            System.out.println("2 - start with");
+            System.out.println("3 - end with");
+            System.out.println("4 - contains");
             System.out.println("0 - exit");
-            userAction = sc.nextLine();
+            userAction = sc.next();
+            findValue = 0;
             switch (userAction) {
                 case "1" -> {
+                    System.out.println("Enter the integral for the length word");
+                    enterInt = sc.nextInt();
+                    System.out.println("Result: ");
                     for (String i : words) {
-                        if (i.length() >= longestWord.length()) {
-                            longestWord = i;
+                        if (i.length() <= enterInt) {
+                            System.out.println(++findValue + " " + i);
                         }
                     }
-                    System.out.println("Your words: " + enterWords);
-                    System.out.println("The longest word in an array: " + longestWord);
+                    if (findValue == 0) System.out.println("Did not find any value");
                 }
                 case "2" -> {
-                    System.out.println("Your words: " + enterWords);
-                    System.out.println("The first letters of each word: ");
+                    System.out.println("Enter the letter for the start with word");
+                    enterValue = sc.next();
+                    System.out.println("Result: ");
                     for (String i : words) {
-                        System.out.println(i.charAt(0));
-                    }
-                }
-                case "3" -> {
-                    System.out.println("Your words: " + enterWords);
-                    System.out.println("The last letters of each word");
-                    for (String i : words) {
-                        System.out.println(i.substring(i.length() - 1));
-                    }
-                }
-                case "4" -> {
-                    System.out.println("Your words: " + enterWords);
-                    System.out.println("The part of each words: ");
-                    for (String i : words) {
-                        if (i.length() <= 3) {
-                            System.out.println(i);
-                        } else if (i.length() <= 10) {
-                            System.out.println(i.substring(1, i.length() - 2));
-                        } else {
-                            System.out.println(i.substring(5, i.length() - 2));
+                        if (i.startsWith(enterValue)) {
+                            System.out.println(++findValue + " " + i);
                         }
                     }
+                    if (findValue == 0) System.out.println("Did not find any value");
                 }
+                case "3" -> {
+                    System.out.println("Enter the letter for the end with word");
+                    enterValue = sc.next();
+                    System.out.println("Result: ");
+                    for (String i : words) {
+                        if (i.endsWith(enterValue)) {
+                            System.out.println(++findValue + " " + i);
+                        }
+                    }
+                    if (findValue == 0) System.out.println("Did not find any value");
+                }
+                case "4" -> {
+                    System.out.println("Enter the letters for the part of word");
+                    enterValue = sc.next();
+                    System.out.println("Result: ");
+                    for (String i : words) {
+                        if (i.contains(enterValue)) {
+                            System.out.println(++findValue + " " + i);
+                        }
+                        if (findValue == 0) System.out.println("Did not find any value");
+                    }
+                }
+                case "0" -> {
+                    System.out.println("Exit");
+                    System.out.println("Thanks for using our program");
+                }
+                default -> System.out.println("Something is wrong! You should enter number from 1 to 4 or 0");
             }
-        } while (!userAction.equals("0"));
+        }
+        while (!userAction.equals("0"));
     }
 }
