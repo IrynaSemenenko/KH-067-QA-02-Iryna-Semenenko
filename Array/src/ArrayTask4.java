@@ -71,8 +71,8 @@ public class ArrayTask4 {
                         if (i.contains(enterValue)) {
                             System.out.println(++findValue + " " + i);
                         }
-                        if (findValue == 0) System.out.println("Did not find any value");
                     }
+                    if (findValue == 0) System.out.println("Did not find any value");
                 }
                 case "0" -> {
                     System.out.println("Exit");
