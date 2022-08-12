@@ -19,7 +19,6 @@ public class ArrayTask4 {
             }
         } while (!end);
         do {
-
             System.out.println("Choose an action with an array of words and enter a number: ");
             System.out.println("1 - maximum length ");
             System.out.println("2 - start with");
