@@ -3,10 +3,8 @@ import java.util.Scanner;
 public class ArrayTask4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String userAction;
-        String enterWords;
+        String userAction, enterWords, enterValue;
         String[] words;
-        String enterValue;
         int enterInt;
         boolean end = false;
         int findValue;
@@ -21,6 +19,7 @@ public class ArrayTask4 {
             }
         } while (!end);
         do {
+
             System.out.println("Choose an action with an array of words and enter a number: ");
             System.out.println("1 - maximum length ");
             System.out.println("2 - start with");
@@ -36,10 +35,11 @@ public class ArrayTask4 {
                     System.out.println("Result: ");
                     for (String i : words) {
                         if (i.length() <= enterInt) {
-                            System.out.println(++findValue + " " + i);
+                            ++findValue;
+                            System.out.println(i);
                         }
                     }
-                    if (findValue == 0) System.out.println("Did not find any value");
+                    if (findValue == 0) System.out.println("Did not find any value, ");
                 }
                 case "2" -> {
                     System.out.println("Enter the letter for the start with word");
@@ -47,7 +47,8 @@ public class ArrayTask4 {
                     System.out.println("Result: ");
                     for (String i : words) {
                         if (i.startsWith(enterValue)) {
-                            System.out.println(++findValue + " " + i);
+                            ++findValue;
+                            System.out.println(i);
                         }
                     }
                     if (findValue == 0) System.out.println("Did not find any value");
@@ -58,7 +59,8 @@ public class ArrayTask4 {
                     System.out.println("Result: ");
                     for (String i : words) {
                         if (i.endsWith(enterValue)) {
-                            System.out.println(++findValue + " " + i);
+                            ++findValue;
+                            System.out.println(i);
                         }
                     }
                     if (findValue == 0) System.out.println("Did not find any value");
@@ -69,7 +71,8 @@ public class ArrayTask4 {
                     System.out.println("Result: ");
                     for (String i : words) {
                         if (i.contains(enterValue)) {
-                            System.out.println(++findValue + " " + i);
+                            ++findValue;
+                            System.out.println(i);
                         }
                     }
                     if (findValue == 0) System.out.println("Did not find any value");
