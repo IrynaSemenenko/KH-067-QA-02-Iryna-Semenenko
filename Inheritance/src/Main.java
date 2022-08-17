@@ -3,6 +3,8 @@ public class Main {
         System.out.println("Let's look at the characters of the Paw Patrol game\n");
         Ryder ryder = new Ryder();
         ryder.description();
+        Chase chase = new Chase();
+        chase.description();
 
     }
 }

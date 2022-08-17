@@ -1,18 +1,11 @@
 public class Person extends Character {
     private String job;
 
+    public Person() {
+    }
+
     public String getJob() {
-        return null;
-    }
-
-    @Override
-    public String getName() {
-        return null;
-    }
-
-    @Override
-    public String getWhoIsThis() {
-        return null;
+        return job;
     }
 
     public Person(String name, String whoIsThis, String job) {
