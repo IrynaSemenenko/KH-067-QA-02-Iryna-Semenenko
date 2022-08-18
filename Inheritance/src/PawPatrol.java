@@ -1,15 +1,11 @@
 public class PawPatrol extends Character {
-    private String superPower;
-    private String breed;
-
+    private String superPower, breed;
     public String getSuperPower() {
         return superPower;
     }
-
     public String getBreed() {
         return breed;
     }
-
     public PawPatrol(String name, String function, String superPower, String breed) {
         super(name, function);
         this.superPower = superPower;
@@ -17,6 +13,6 @@ public class PawPatrol extends Character {
     }
     @Override
     public void description() {
-        System.out.println(getName() + " is "+ getBreed() + ", " + getSuperPower() + " and " + getFunction() + "\n");
+        System.out.println(getName() + "  " +  getBreed() + "  " + getSuperPower() + "  " + getFunction() + "\n");
     }
 }
