@@ -8,12 +8,12 @@ public class Person extends Character {
         return job;
     }
 
-    public Person(String name, String whoIsThis, String job) {
-        super(name, whoIsThis);
+    public Person(String name, String function, String job) {
+        super(name, function);
         this.job = job;
     }
 
     public void description() {
-        System.out.println(getName() + " is " + getJob() + " and " + getWhoIsThis() + "\n");
+        System.out.println(getName() + " is " + getJob() + " and " + getFunction() + "\n");
     }
 }

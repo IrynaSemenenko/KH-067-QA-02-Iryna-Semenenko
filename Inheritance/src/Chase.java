@@ -1,12 +1,17 @@
 public class Chase extends PawPatrol{
-    public Chase(String name, String whoIsThis, String superPower) {
-        super(name, whoIsThis, superPower);
+    public Chase(String name, String function, String superPower, String breed) {
+        super(name, function, superPower, breed);
     }
     public Chase() {
-        super("Chase", "german shepherd, team leader", "super speed");
+        super("Chase",
+                "acting as commander, police officer and super spy",
+                "super speed",
+                "german shepherd puppy");
     }
     public void description() {
-        System.out.println(getName() + ": ");
-        System.out.println("He is a " + getWhoIsThis() + ". Has " + getSuperPower() + "\n");
+        System.out.println("Name: " + getName());
+        System.out.println("He is a "+ getBreed());
+        System.out.println("His function: " + getFunction());
+        System.out.println("His super power:  " + getSuperPower() + "\n");
     }
 }

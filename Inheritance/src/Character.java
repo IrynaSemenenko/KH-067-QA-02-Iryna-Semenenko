@@ -1,6 +1,6 @@
 public abstract class Character {
     private String name;
-    private String whoIsThis;
+    private String function;
 
     public Character() {
     }
@@ -9,13 +9,13 @@ public abstract class Character {
         return name;
     }
 
-    public String getWhoIsThis() {
-        return whoIsThis;
+    public String getFunction() {
+        return function;
     }
 
-    public Character(String name, String whoIsThis) {
+    public Character(String name, String function) {
         this.name = name;
-        this.whoIsThis = whoIsThis;
+        this.function = function;
     }
 
     public abstract void description();
