@@ -1,12 +1,18 @@
+package character.extendsCharacter.extendsPerson;
+
+import character.extendsCharacter.Person;
+
 public class Ryder extends Person {
     public Ryder(String name, String function, String job) {
         super(name, function, job);
     }
+
     public Ryder() {
-        super("Ryder",
+        super("character.extendsCharacter.extendsPerson.Ryder",
                 "leader of the Paw Patrol team",
                 "savior");
     }
+
     public void description() {
         System.out.println("Name: " + getName());
         System.out.println("He is a " + getJob());

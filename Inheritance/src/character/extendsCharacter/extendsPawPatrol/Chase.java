@@ -1,9 +1,13 @@
-public class Chase extends PawPatrol{
+package character.extendsCharacter.extendsPawPatrol;
+
+import character.extendsCharacter.PawPatrol;
+
+public class Chase extends PawPatrol {
     public Chase(String name, String function, String superPower, String breed) {
         super(name, function, superPower, breed);
     }
     public Chase() {
-        super("Chase",
+        super("character.extendsCharacter.extendsPawPatrol.Chase",
                 "acting as commander, police officer and super spy",
                 "super speed",
                 "german shepherd puppy");
