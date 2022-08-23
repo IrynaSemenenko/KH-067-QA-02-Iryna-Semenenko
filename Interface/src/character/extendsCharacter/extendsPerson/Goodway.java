@@ -1,3 +1,9 @@
+package character.extendsCharacter.extendsPerson;
+
+import character.extendsCharacter.Person;
+import interfaces.Gender;
+import interfaces.HasUniform;
+
 public class Goodway extends Person implements Gender, HasUniform {
     private final String GENDER = "female";
 
@@ -6,7 +12,7 @@ public class Goodway extends Person implements Gender, HasUniform {
     }
 
     public Goodway() {
-        super("Goodway",
+        super("character.extendsCharacter.extendsPerson.Goodway",
                 "submits assignments for the paw patrol team",
                 "mayor of Adventure Bay");
     }

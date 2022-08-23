@@ -1,3 +1,7 @@
+package character.extendsCharacter;
+
+import character.Character;
+
 public class Person extends Character {
     private String job;
 

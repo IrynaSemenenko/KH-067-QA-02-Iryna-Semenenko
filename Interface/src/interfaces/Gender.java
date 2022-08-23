@@ -1,3 +1,5 @@
+package interfaces;
+
 public interface Gender {
     String getMaleGender();
 
@@ -5,9 +7,9 @@ public interface Gender {
 
     default void getGender() {
         if (getMaleGender().equals("male")) {
-            System.out.println("Gender: " + getMaleGender());
+            System.out.println("interfaces.Gender: " + getMaleGender());
         } else {
-            System.out.println("Gender: " + getFeMaleGender());
+            System.out.println("interfaces.Gender: " + getFeMaleGender());
         }
     }
 }

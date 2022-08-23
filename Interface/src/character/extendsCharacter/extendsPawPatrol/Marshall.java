@@ -1,3 +1,9 @@
+package character.extendsCharacter.extendsPawPatrol;
+
+import character.extendsCharacter.PawPatrol;
+import interfaces.Gender;
+import interfaces.HasUniform;
+
 public class Marshall extends PawPatrol implements Gender, HasUniform {
     private final String GENDER = "male";
 
@@ -6,7 +12,7 @@ public class Marshall extends PawPatrol implements Gender, HasUniform {
     }
 
     public Marshall() {
-        super("Marshall",
+        super("character.extendsCharacter.extendsPawPatrol.Marshall",
                 "acting as a firefighter and a medic",
                 "able to control heat and fire",
                 "dalmatian puppy");

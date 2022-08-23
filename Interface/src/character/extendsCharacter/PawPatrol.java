@@ -1,3 +1,7 @@
+package character.extendsCharacter;
+
+import character.Character;
+
 public class PawPatrol extends Character {
     private String superPower, breed;
 

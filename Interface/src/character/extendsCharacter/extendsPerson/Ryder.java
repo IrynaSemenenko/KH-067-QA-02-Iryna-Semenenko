@@ -1,3 +1,9 @@
+package character.extendsCharacter.extendsPerson;
+
+import character.extendsCharacter.Person;
+import interfaces.Gender;
+import interfaces.HasUniform;
+
 public class Ryder extends Person implements Gender, HasUniform {
     private final String GENDER = "male";
 
@@ -6,7 +12,7 @@ public class Ryder extends Person implements Gender, HasUniform {
     }
 
     public Ryder() {
-        super("Ryder",
+        super("character.extendsCharacter.extendsPerson.Ryder",
                 "leader of the Paw Patrol team",
                 "savior");
     }

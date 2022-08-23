@@ -1,3 +1,5 @@
+package interfaces;
+
 public interface HasUniform {
     boolean UNIFORM = true;
 
@@ -12,7 +14,7 @@ public interface HasUniform {
             System.out.println("Uniform colors: " + colorUniform());
             System.out.println("The presence of a cap: " + hasCap());
         } else {
-            System.out.println("Character does not have uniform");
+            System.out.println("Character.Character does not have uniform");
         }
     }
 }

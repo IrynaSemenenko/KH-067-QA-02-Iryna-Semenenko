@@ -1,3 +1,9 @@
+package character.extendsCharacter.extendsPawPatrol;
+
+import character.extendsCharacter.PawPatrol;
+import interfaces.Gender;
+import interfaces.HasUniform;
+
 public class Chase extends PawPatrol implements Gender, HasUniform {
     private final String GENDER = "male";
 
@@ -6,7 +12,7 @@ public class Chase extends PawPatrol implements Gender, HasUniform {
     }
 
     public Chase() {
-        super("Chase",
+        super("character.extendsCharacter.extendsPawPatrol.Chase",
                 "acting as commander, police officer and super spy",
                 "super speed",
                 "german shepherd puppy");

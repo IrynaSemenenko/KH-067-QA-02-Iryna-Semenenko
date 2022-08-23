@@ -1,3 +1,8 @@
+import character.extendsCharacter.extendsPawPatrol.Chase;
+import character.extendsCharacter.extendsPawPatrol.Marshall;
+import character.extendsCharacter.extendsPerson.Goodway;
+import character.extendsCharacter.extendsPerson.Ryder;
+
 public class DescriptionAllCharacters {
     public static void main(String[] args) {
         System.out.println("Let's look at the characters of the Paw Patrol game:\n");
