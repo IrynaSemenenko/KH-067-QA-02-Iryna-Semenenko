@@ -41,6 +41,7 @@ public class FirstTest {
         closeButtonInPopUpElem.click();
         // Add the product to the cart
         String buyButton = "//button[@class='buy-button button button--with-icon button--green button--medium ng-star-inserted']";
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(buyButton)));
         WebElement buyButtonElem = driver.findElement(By.xpath(buyButton));
         buyButtonElem.click();
         //// Check that modal window of the cart was opened
@@ -48,6 +49,7 @@ public class FirstTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(popUpCartElem)));
         WebElement popUpCart = driver.findElement(By.xpath(popUpCartElem));
         System.out.println("Pop-up cart is displayed: " + popUpCart.isDisplayed());
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(popUpCartElem)));
         System.out.println("URL is: " + driver.getCurrentUrl().equals("https://rozetka.com.ua/schauma_3838824208985/p23501425/"));
         driver.quit();
     }
