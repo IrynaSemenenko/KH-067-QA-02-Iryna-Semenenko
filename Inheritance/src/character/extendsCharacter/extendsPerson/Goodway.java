@@ -8,7 +8,7 @@ public class Goodway extends Person {
     }
 
     public Goodway() {
-        super("character.extendsCharacter.extendsPerson.Goodway",
+        super("Goodway",
                 "submits assignments for the paw patrol team",
                 "mayor of Adventure Bay");
     }

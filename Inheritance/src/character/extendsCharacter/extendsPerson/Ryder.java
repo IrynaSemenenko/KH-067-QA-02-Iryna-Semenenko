@@ -8,7 +8,7 @@ public class Ryder extends Person {
     }
 
     public Ryder() {
-        super("character.extendsCharacter.extendsPerson.Ryder",
+        super("Ryder",
                 "leader of the Paw Patrol team",
                 "savior");
     }

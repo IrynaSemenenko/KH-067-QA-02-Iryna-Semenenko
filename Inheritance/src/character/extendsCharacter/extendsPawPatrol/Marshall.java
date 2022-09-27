@@ -8,7 +8,7 @@ public class Marshall extends PawPatrol {
     }
 
     public Marshall() {
-        super("character.extendsCharacter.extendsPawPatrol.Marshall",
+        super("Marshall",
                 "acting as a firefighter and a medic",
                 "able to control heat and fire",
                 "dalmatian puppy");
