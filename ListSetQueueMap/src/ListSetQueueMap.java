@@ -12,18 +12,13 @@ import java.util.HashSet;
 
 public class ListSetQueueMap {
     static List<String> sortList(List<String> list) {
-        Collections.sort(list, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareToIgnoreCase(o2);
-            }
-        });
+        Collections.sort(list, Comparator.comparing(s -> s.toLowerCase()));
         return list;
     }
+
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
         System.out.println("_______LIST_______");
-        System.out.println("Is the list empty? -" + list.isEmpty());
         System.out.println("-----Add elements to the list");
         list.add("elephant");
         list.add("Zebra");
@@ -43,7 +38,6 @@ public class ListSetQueueMap {
         System.out.println(sortList(list) + "\n");
         System.out.println("_______SET_______");
         Set<String> set = new HashSet<>();
-        System.out.println("Is the list empty? - " + set.isEmpty());
         System.out.println("-----Add elements to the list");
         set.add("cat");
         set.add("lion");
@@ -53,12 +47,10 @@ public class ListSetQueueMap {
         for (String s : set) {
             System.out.println(s);
         }
-        System.out.println("Is the list empty? - " + set.isEmpty());
         System.out.println("Size of the list: " + set.size());
         System.out.println("-----Contains elements \"rabbit\": " + set.contains("rabbit") + "\n");
         System.out.println("_______QUEUE_______");
         Queue<String> queue = new ArrayDeque<>();
-        System.out.println("Queue in the canteen for breakfast at the zoo: \n");
         queue.offer("Crocodile");
         queue.offer("Elephant");
         queue.offer("lion");
@@ -90,6 +82,5 @@ public class ListSetQueueMap {
                 + map.containsValue("Independence Day of Ukraine"));
         System.out.println("-----Clear");
         map.clear();
-        System.out.println("-----Size of the list after removing - " + map.size() + "\n");
     }
 }
