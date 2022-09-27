@@ -1,51 +1,42 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class UniversityGroup {
-    private final String groupName;
-    private final int startYear;
+    private String groupName;
+    private int startYear;
     private int endYear;
     private String[] studentArray;
-    public String getGroupName() {
-        return groupName;
-    }
-    public int getStartYear() {
-        return startYear;
-    }
+
     public String[] getStudentArray() {
         return studentArray;
     }
-    public int getEndYear() {
-        return endYear;
-    }
-    public int setEndYear() {
-        return startYear + 5;
-    }
+
     public UniversityGroup(String groupName, int startYear) {
         this.groupName = groupName;
         this.startYear = startYear;
-        setEndYear();
+        this.endYear = startYear + 5;
     }
+
     public UniversityGroup(String groupName, int startYear, String[] studentArray) {
         this.groupName = groupName;
         this.startYear = startYear;
         this.studentArray = studentArray;
-        setEndYear();
+        this.endYear = startYear + 5;
     }
-    public String[] addStudents() {
-        String[] students;
-        students = new String[]{"Nikita", "Anatoliy", "Olga"};
-        return students;
-    }
-    public void getGroupDescription() {
-        if (getStudentArray() == null) {
-            System.out.println(groupName);
-            System.out.println("Years of study: " + startYear + " - " + setEndYear());
-            System.out.println("Students: " + Arrays.toString(addStudents()));
-        } else {
-            System.out.println(groupName);
-            System.out.println("Years of study: " + startYear + " - " + setEndYear());
-            System.out.println("Students: " + Arrays.toString(getStudentArray()));
+
+    public void addStudents() {
+        if (studentArray == null) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("\nStudents array is empty for the " + groupName + ". \nPlease, enter the name of the students (format: name1, name2, ... nameX):");
+            String enterStudents = sc.nextLine();
+            this.studentArray = enterStudents.split(",");
         }
+    }
+
+    public void getGroupDescription() {
+        System.out.println(groupName);
+        System.out.println("Years of study: " + startYear + " - " + endYear);
+        System.out.println("Students: " + Arrays.toString(getStudentArray()));
     }
 }
 
